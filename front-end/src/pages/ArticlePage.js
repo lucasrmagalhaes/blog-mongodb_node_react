@@ -9,7 +9,16 @@ const ArticlePage = ({ match }) => {
     const [articleInfo, setArticleInfo] = useState({ upvotes: 0, comments: [] });
 
     useEffect(() => {
-        setArticleInfo({ upvotes: Math.ceil(Math.random() * 10) });
+        const fetchData = async () => {
+            const result = await fetch(`/api/articles/${name}`);
+            const body = await result.json();
+
+            console.log("body", body);
+
+            setArticleInfo(body);
+        }
+
+        fetchData();
     }, [name]);
 
     if (!article) {
