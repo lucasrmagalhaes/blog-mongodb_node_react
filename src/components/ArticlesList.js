@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
 import { Link } from 'react-router-dom';
-import articles from './article-content';
 
-const ArticleList = () => (
+const ArticlesList = ({ articles }) => (
     <>
-        <h1>Articles</h1>
-
         {articles.map((article, key) => (
             <Link 
                 key={key} 
@@ -20,4 +17,4 @@ const ArticleList = () => (
     </>
 );
 
-export default ArticleList;
+export default ArticlesList;
