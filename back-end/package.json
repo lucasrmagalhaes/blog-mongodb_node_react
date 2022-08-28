@@ -4,6 +4,7 @@
   "description": "```\r npm init -y\r ```",
   "main": "index.js",
   "scripts": {
+    "start": "npx nodemon --exec npx babel-node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,5 +16,8 @@
     "@babel/preset-env": "^7.18.10",
     "body-parser": "^1.20.0",
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
