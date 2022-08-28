@@ -1,2 +1,7 @@
-# full_stack_site-node_react
-React: Creating and Hosting a Full-Stack Site
+### React: Creating and Hosting a Full-Stack Site
+
+---
+
+```
+npx create-react-app my-blog --use-npm
+```
