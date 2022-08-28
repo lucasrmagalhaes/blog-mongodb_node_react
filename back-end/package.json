@@ -15,7 +15,8 @@
     "@babel/node": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
     "body-parser": "^1.20.0",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mongodb": "^4.9.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"

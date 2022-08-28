@@ -71,3 +71,7 @@ Nonrelational database:
   "comments": []    
 }
 ```
+
+```
+npm install --save mongodb
+```
