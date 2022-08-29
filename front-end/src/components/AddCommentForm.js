@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const AddCommentForm = () => {
+const AddCommentForm = ({ articleName, setArticleInfo }) => {
     const [username, setUsername] = useState('');
     const [commentText, setCommentText] = useState('');
     
-    const addCommnet = async () => {
+    const addComment = async () => {
         const result = await fetch(`/api/articles/${articleName}/add-comment`, {
             method: 'POST',
             body: JSON.stringify({ username, text: commentText }),
@@ -12,6 +12,13 @@ const AddCommentForm = () => {
                 'Content-Type': 'application/json'
             }
         });
+
+        const body = await result.json();
+
+        setArticleInfo(body);
+        
+        setUsername('');
+        setCommentText('');
     }
 
     return (
@@ -39,7 +46,7 @@ const AddCommentForm = () => {
                 />
             </label>
 
-            <button>Add Comment</button>
+            <button onClick={() => addComment()}>Add Comment</button>
         </div>
     )
 };
