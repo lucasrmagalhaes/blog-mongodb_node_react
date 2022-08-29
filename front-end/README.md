@@ -10,3 +10,7 @@ npm install --save react-router-dom
 ```
 npm install --save whatwg-fetch
 ```
+
+```
+npm run build
+```
